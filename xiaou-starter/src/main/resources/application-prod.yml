@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+    url: jdbc:p6spy:mysql://45.192.101.124:3306/u-space?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: u-space
+    password: 123456
+  redis:
+    redisson:
+      config: |
+        singleServerConfig:
+          address: redis://localhost:6379 # Redis 连接地址，前缀为 redis://
+          timeout: 3000
+sa-token:
+  alone-redis:
+    database: 11
+    host: 127.0.0.1
+    port: 6379
+
+#文件上传
+#dromara:
+#  x-file-storage:
+#    default-platform: tencent-cos-1
+#    tencent-cos:
+#      - platform: tencent-cos-1
+#        enable-storage: true
+#        secret-id: xxx
+#        secret-key: xxxx
+#        region: ap-chengdu
+#        bucket-name: xxx
+#        domain: xxx
+#        base-path: upload/
+
